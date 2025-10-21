@@ -48,6 +48,7 @@ Tools: Visual Studio Code, Git, GitHub
 1️⃣ Clone the Repository:
 
 git clone https://github.com/Mariyamhanna/scopeindiaproject.git
+
 cd scopeindiaproject
 
 2️⃣ Create a Virtual Environment:
