@@ -1,0 +1,148 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    <div style="clear:both"></div>
+    <nav id="main_navigation">
+        <ul class="desktop">
+            <li><a href="home" target="_self" class="current">HOME</a></li>
+            <li><a href="courses" target="_self">COURSES</a></li>
+            <li><a class="registration_link" href="register" target="_self">REGISTRATION</a></li>
+            <li><a href="about" target="_self">ABOUT US</a></li>
+            <li><a href="faq" target="_self">FAQ</a></li>
+            {% if request.session.user_id %}
+                <li><a href="{% url 'profile' %}" target="_self">PROFILE</a></li>
+                <li><a href="{% url 'logout' %}" target="_self">LOGOUT</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}" target="_self">LOGIN</a></li>
+            {% endif %}
+            <li><a href="contact" target="_self">CONTACT US</a></li>
+        </ul>
+        <span id="mobile-icon">
+        <ul class="mobile" id="mobile_menu">
+            <li style="text-align: right;"><span class="close_button">X</span></li>
+            <li><a href="home.html" target="_self" class="current">HOME</a></li>
+            <li><a href="courses-scope-india.html" target="_self">COURSES</a></li>
+            <li><a class="registration_link" href="register" target="_self">REGISTRATION</a></li>
+            <li><a href="about" target="_self">ABOUT US</a></li>
+            <li><a href="faq" target="_self">FAQ</a></li>
+            <li><a href="faq" target="_self">REVIEWS</a></li>
+            <li><a href="contact" target="_self">CONTACT US</a></li>
+        </ul>
+        </span>
+    </nav>
+    
+    <div class="profile-container">
+        <h2>Welcome, {{ user.name }}</h2>
+        
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" value="{{ user.name }}">
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="reg_email" value="{{ user.reg_email }}">
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" name="reg_password" value="{{ user.reg_password }}">
+            </div>
+            <div class="form-group">
+                <label>Mobile:</label>
+                <input type="text" name="mobile" value="{{ user.mobile }}">
+            </div>
+            <div class="form-group">
+                <label>Course:</label>
+                <input type="text" name="course" value="{{ user.course }}">
+            </div>
+            <div class="form-group">
+                <label>Qualification:</label>
+                <input type="text" name="qualification" value="{{ user.qualification }}">
+            </div>
+            <div class="form-group">
+                <label>College:</label>
+                <input type="text" name="college" value="{{ user.college }}">
+            </div>
+            <div class="form-group">
+                <label>Year:</label>
+                <input type="text" name="year" value="{{ user.year }}">
+            </div>
+            <div class="form-group">
+                <label>Location:</label>
+                <input type="text" name="location" value="{{ user.location }}">
+            </div>
+            <div class="form-group">
+                <label>Date of Birth:</label>
+                <input type="date" name="dob" value="{{ user.dob|date:'Y-m-d'  }}">
+            </div>
+            <div class="form-group">
+                <label>Training Mode:</label>
+                <input type="text" name="reg_training_mode" value="{{ user.reg_training_mode }}">
+            </div>
+            <div class="form-group">
+                <label>Training Location:</label>
+                <input type="text" name="reg_training_location" value="{{ user.reg_training_location }}">
+            </div>
+            <div class="form-group">
+                <label>Preferred Timings:</label>
+                <input type="text" name="reg_preferred_timings" value="{{ user.reg_preferred_timings }}">
+            </div>
+            <div class="form-group">
+                <label>Guardian Name:</label>
+                <input type="text" name="reg_guardian_name" value="{{ user.reg_guardian_name }}">
+            </div>
+            <div class="form-group">
+                <label>Guardian Occupation:</label>
+                <input type="text" name="reg_guardian_occupation" value="{{ user.reg_guardian_occupation }}">
+            </div>
+            <div class="form-group">
+                <label>Guardian's Mobile:</label>
+                <input type="text" name="reg_guardians_mobile" value="{{ user.reg_guardians_mobile }}">
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text" name="reg_address" value="{{ user.reg_address }}">
+            </div>
+            <div class="form-group">
+                <label>Country:</label>
+                <input type="text" name="reg_country" value="{{ user.reg_country }}">
+            </div>
+            <div class="form-group">
+                <label>State:</label>
+                <input type="text" name="reg_state" value="{{ user.reg_state }}">
+            </div>
+            <div class="form-group">
+                <label>City:</label>
+                <input type="text" name="reg_city" value="{{ user.reg_city }}">
+            </div>
+            <div class="form-group">
+                <label>ZIP:</label>
+                <input type="text" name="reg_zip" value="{{ user.reg_zip }}">
+            </div>
+            <div class="form-group">
+                <label>Message:</label>
+                <textarea name="message">{{ user.message }}</textarea>
+            </div>
+
+            <button type="submit" class="update-btn">Update</button>
+        </form>
+
+        <form method="post" action="{% url 'delete_profile' %}">
+            {% csrf_token %}
+            <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete your profile?')">Delete Profile</button>
+        </form>
+
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+/* ─── NAVIGATION POSITIONING & LAYOUT ───────────────────────────────────── */
+#main_navigation {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    float: none;       /* override any previous float */
+    margin: 0;         /* remove margins */
+    width: auto;
+    z-index: 100;
+}
+
+#main_navigation ul.desktop {
+    display: flex;     /* row layout */
+    gap: 20px;         /* space between links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    font-size: 12px;
+    color: #96a8bd;
+    font-weight: bold;
+    letter-spacing: 0.6pt;
+}
+
+/* ─── YOUR ORIGINAL CSS (unchanged) ───────────────────────────────────────── */
+body {
+    background: #04145f;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    position: relative; /* so the absolute nav is positioned relative to it */
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+    margin-top: 150px;
+   
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fdfdfd;
+}
+
+textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.update-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #a71d2a;
+}
+
+.logout-btn {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #5a6268;
+}
+
+/* ─── YOUR LINK & HOVER STYLES FOR DESKTOP NAV (unchanged) ───────────────── */
+#main_navigation ul.desktop li a {
+    text-decoration: none;
+    color: #96a8bd;
+    padding: 5px 5px;
+}
+
+#main_navigation ul.desktop li a:hover {
+    text-decoration: none;
+    color: #c7ac20;
+    border: 1px solid #9da5ca;
+    padding: 5px 4px;
+    background-color: rgba(135,133,125,0.3);
+    border-radius: 5px;
+}
+
+#main_navigation ul.desktop li a:visited {
+    text-decoration: none;
+}
+
+#main_navigation ul.desktop li a.current {
+    text-decoration: none;
+    color: #c7ac20;
+    border: 1px solid #9da5ca;
+    padding: 5px 10px;
+    background-color: rgba(135,133,125,0.3);
+    border-radius: 5px;
+}
+
+/* ─── KEEP YOUR MOBILE-MENU & OTHER RULES EXACTLY THE SAME ─────────────────── */
+#container_page_intro #container_google_star1 {
+    display: none;
+}
+
+#container_google_star,
+#container_google_star1 {
+    margin: 15px 65px 0 0;
+    float: right;
+}
+
+#main_navigation ul.mobile {
+    display: none;
+    list-style-type: none;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.6pt;
+    background: grey;
+    border: 3px solid #c7ac20;
+    padding: 5px 10px;
+    background-color: #0a1d7b;
+    border-radius: 13px;
+    position: fixed;
+    width: 180px;
+    z-index: 1000;
+    top: 140px;
+    right: -10px;
+}
+
+#main_navigation ul.mobile li a {
+    text-decoration: none;
+    color: #96a8bd;
+    padding: 5px 0 5px 5px;
+    width: 100%;
+    display: inline-block;
+}
+
+.registration_link {
+    background-color: red;
+    border-radius: 5px;
+    color: white !important;
+}
+
+#main_navigation ul.mobile li a:hover {
+    color: #c7ac20;
+    border: 1px solid #9da5ca;
+    background-color: rgba(135,133,125,0.3);
+    border-radius: 5px;
+}
+
+#main_navigation ul.mobile li a.current {
+    color: #c7ac20;
+    border: 1px solid #9da5ca;
+    background-color: rgba(135,133,125,0.3);
+    border-radius: 5px;
+}
+
+#main_navigation ul.mobile li {
+    margin: 10px 0;
+    text-align: right;
+}

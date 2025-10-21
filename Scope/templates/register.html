@@ -1,0 +1,305 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>SCOPE INDIA Registration | Learn Data Science, AI, Software, Networking, DevOps & Cloud Courses, Online & Offline</title>
+		<meta name="description" content="SCOPE INDIA offers expert training in Python (Data Science, AI, ML, Deep Learning), Java, PHP, .NET, Software Testing, AWS, Azure, MCSE, RHCE, and Digital Marketing. Available online & offline." />
+		<meta name="author" content="SUFFIX E SOLUTIONS" />
+		<meta name="keywords" content="professional courses in Trivandrum, data science training, AI certification, Microsoft Power BI course, advanced IT skills, Power BI course, learn Power BI, learn data analysis, course on Power BI, data analytic course, data analytics with Power BI course, data science course near me with placement, data science complete course, artificial intelligence certification, AI certificate programs, learn to be a data scientist, AI ML certification, AI certificate course, best AI certification, data science training near me, best AI ML certification, data analyst and data scientist course, best analytics course, be in data science, artificial intelligence certification training, advanced IT courses for professionals, top IT training institute in Trivandrum, best IT training in Kochi, IT training institute Nagercoil, register now, join now, reg now, register scope india, register new course, register full stack course, register networking course, register datascience, register ai courses, register digital marketing, digital marketing course, ai and data science course, full stack course, networking course, cloud courses, software testing courses, salesforce course, data analytics course, testing courses">
+		<!-- Mobile Specific Metas -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	    <link rel="icon" type="image/x-icon" href="images/scopeindia-bird-logo-icon.ico">
+		<link rel="canonical" href="register" />
+		<link rel="alternate" hreflang="en" href="register" />
+	    <link href="{%static 'css/register.css'%}" rel="stylesheet"/>
+        <script src="{%static 'js/register.main.js'%}" type="text/javascript"></script>
+	    <script src="{%static 'js/register.js'%}" type="text/javascript"></script>    
+	</head>
+	<body>
+		<div id="call_float_icons">
+			<a href="tel:+919745936073" title="Call SCOPE INDIA in just a click!">
+				<img src="{%static 'images/callnow-scope-india.webp'%}" alt="Call SCOPE INDIA" />
+			</a>
+			<a href="https://wa.me/+919745936073" target="_blank" title="Talk to our student care team on WhatsApp!">
+				<img src="{%static 'images/whatsapp-scope-india.webp'%}" alt="Call SCOPE INDIA" />
+			</a>
+			<a href="image-gallery-scope-india.html" title="Watch SCOPE INDIA through photos and videos!">
+				<img src="{%static 'images/gallery-scope-india.webp'%}" alt="SCOPE INDIA Gallery" />
+			</a>
+			<!-- <img id="mobile_menu_button" src="images/mobile-menu-icon-scopeindia.webp" alt="Main Menu" title="Click for the site Menu!" width="50px"> -->
+			<svg id="mobile_menu_button" xmlns="http://www.w3.org/2000/svg"  fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+			  </svg>
+		</div>
+		<section id="container_header">
+			<div>
+				<div id="container_logo">
+					<a href="home" target="_self" class="current"><img id="logo" src="{%static 'images/scopeindia-logo1.webp'%}" alt="SCOPE INDIA logo" title="SCOPE INDIA, Center for Software, Networking, and Cloud education from Kerala and Tamil Nadu" /></a>
+				</div>
+				<div id="container_google_star">
+					<a href="scope-india- s.html">
+						<img id="google_star" src="{%static 'images/google-rating-scope-india.webp'%}" width="200px" title="SCOPE INDIA is a 5 star rated institute">
+					</a>				
+				</div>
+			</div>
+			<div style="clear:both"></div>
+			<nav id="main_navigation">
+				<ul class="desktop">
+					<li><a href="home" target="_self" >HOME</a></li>
+					<li><a href="courses" target="_self" >COURSES</a></li>
+					<li><a class="registration_link" href="register" target="_self" class="current">REGISTRATION</a></li>
+					<li><a href="about" target="_self">ABOUT US</a></li>
+					<li><a href="faq" target="_self">FAQ</a></li>
+					<!-- <li><a href="aces-scope-india.html" target="_self">OUR ACES</a></li> -->
+          {% if request.session.user_id %}
+          <li><a href="{% url 'profile' %}" target="_self">PROFILE</a></li>
+          <li><a href="{% url 'logout' %}" target="_self">LOGOUT</a></li>
+      {% else %}
+          <li><a href="{% url 'login' %}" target="_self">LOGIN</a></li>
+      {% endif %}
+					<li><a href="contact" target="_self">CONTACT US</a></li>
+				</ul>
+				<span id="mobile-icon">
+				<ul class="mobile" id="mobile_menu">
+					<li style="	text-align: right;"><span class="close_button">X</span></li>
+					<li><a href="home" target="_self" >HOME</a></li>
+					<li><a href=" courses" target="_self" >COURSES</a></li>
+					<li><a class="registration_link" href=" register" class="current" target="_self">REGISTRATION</a></li>
+					<li><a href="about" target="_self">ABOUT US</a></li>
+					<li><a href="faq" target="_self">FAQ</a></li>
+					<!-- <li><a href="aces-scope-india.html" target="_self">OUR ACES</a></li> -->
+          {% if request.session.user_id %}
+          <li><a href="{% url 'profile' %}" target="_self">PROFILE</a></li>
+          <li><a href="{% url 'logout' %}" target="_self">LOGOUT</a></li>
+      {% else %}
+          <li><a href="{% url 'login' %}" target="_self">LOGIN</a></li>
+      {% endif %}
+					<li><a href="contact" target="_self">CONTACT US</a></li>
+				</ul>
+				<!-- onclick="show_mobile_menu()"  -->
+				<!-- <img id="mobile_menu_button" src="images/mobile-menu-icon-scopeindia.webp" alt="Main Menu" title="Click for the site Menu!" width="50px"> -->
+			</span>
+			</nav>
+		</section>
+		<div style="clear: both;"></div>
+		<section id="container_page_intro">
+			<div>
+				<h1>Course Registration at SCOPE&nbsp;INDIA</h1>
+				<h2>Center for Software, Networking, & Cloud Education</h2>
+				<h3>One of India's best Training destinations for Software, Networking, DevOps and Cloud Computing courses with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and we have assisted more than 15,000 students so far.</h3>
+			</div>
+		</section>
+		<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <section id="registration_head_container">
+
+        <div>
+            <label class="block_element" for="name">Full Name (required)</label>
+            <input class="block_element" type="text" id="name" name="name" minlength="3" maxlength="40" required />
+        </div>
+
+        <div>
+            <label class="block_element" for="dob">Date of Birth (required)</label>
+            <input class="block_element" type="date" id="dob" name="dob" required />
+        </div>
+
+        <div>
+            <label class="block_element" for="qualification">Educational Qualification</label>
+            <input class="block_element" type="text" id="qualification" name="qualification" required />
+        </div>
+
+        <div>
+            <label class="block_element" for="college">College Name</label>
+            <input class="block_element" type="text" id="college" name="college" required />
+        </div>
+
+        <div>
+            <label class="block_element" for="year">Year of Passout</label>
+            <input class="block_element" type="text" id="year" name="year" required />
+        </div>
+
+        <div>
+            <label class="block_element" for="mobile">Mobile Number (required)</label>
+            <input class="block_element" type="tel" id="mobile" name="mobile" minlength="10" maxlength="15" required />
+        </div>
+
+        <div>
+            <label class="block_element" for="reg_email">Email (required)</label>
+            <input class="block_element" type="email" id="reg_email" name="reg_email" minlength="10" maxlength="50" required />
+        </div>
+        <div>
+          <label class="block_element" for="reg_email">Password (required)</label>
+          <input class="block_element" type="password" id="reg_password" name="reg_password" minlength="10" maxlength="50" al required />
+      </div>
+        <!-- <div>
+            <label class="block_element" for="course">Course (required)</label>
+            <input class="block_element" type="text" id="course" name="course" required />
+        </div> -->
+
+        <div>
+            <label class="block_element" for="location">Location</label>
+            <input class="block_element" type="text" id="location" name="location" required />
+        </div>
+          
+              <!-- Course Selection -->
+              <div>
+                <label class="block_element" for="reg_course">Choose your course (required)</label>
+                <select id="reg_course" name="course" required>
+                  <option value="">Choose your course!</option>
+                  <optgroup label="Software Programming Courses">
+                    <option value="PHP Full Stack">PHP Full Stack</option>
+                    <option value="PYTHON Full Stack">PYTHON Full Stack</option>
+                    <option value="JAVA Full Stack">JAVA Full Stack</option>
+                    <option value="C#.NET Core 7 Full Stack">C#.NET Core 7 Full Stack</option>
+                    <option value="MEAN Full Stack">MEAN Full Stack</option>
+                    <option value="MERN Full Stack">MERN Full Stack</option>
+                    <option value="Data Science & AI (Python Guru)">Data Science & AI (Python Guru)</option>
+                    <option value="Python Mastery (Python/Django/MySQL)">Python Mastery (Python/Django/MySQL)</option>
+                    <option value="Google Flutter Mobile App Development">Google Flutter Mobile App Development</option>
+                    <option value="UI/UX Designing">UI/UX Designing</option>
+                  </optgroup>
+                  <optgroup label="SEO/SEM/SMM/ Courses">
+                    <option value="Digital Marketing Master Program">Digital Marketing Master Program</option>
+                  </optgroup>
+                  <optgroup label="Software Testing Courses">
+                    <option value="Software Testing Advanced">Software Testing Advanced</option>
+                    <option value="Software Testing Manual">Software Testing Manual</option>
+                    <option value="ISTQB Certification">ISTQB Certification</option>
+                    <option value="Selenium TestNG & Cucumber">Selenium TestNG & Cucumber</option>
+                  </optgroup>
+                  <optgroup label="Computer Networking & Server Courses">
+                    <option value="Computer Networking (CCNA)">Computer Networking (CCNA)</option>
+                    <option value="Server Admin (MCSE)">Server Admin (MCSE)</option>
+                    <option value="Server Admin (RHCE)">Server Admin (RHCE)</option>
+                    <option value="Security Surveillance & Networking">Security Surveillance & Networking</option>
+                  </optgroup>
+                  <optgroup label="Cloud Computing Courses">
+                    <option value="Cloud Admin (AWS/MS AZURE)">Cloud Admin (AWS/MS AZURE)</option>
+                    <option value="Cloud & Networking Admin (CCNA/AWS)">Cloud & Networking Admin (CCNA/AWS)</option>
+                    <option value="Cloud, Networking, & Server Admin">Cloud, Networking, & Server Admin</option>
+                    <option value="DevOps Mastery (All together)">DevOps Mastery (All together)</option>
+                  </optgroup>
+                  <optgroup label="Others">
+                    <option value="Academic Project">Academic Project</option>
+                    <option value="MS Office">MS Office</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="Advanced MS Excel">Advanced MS Excel</option>
+                    <option value="Graphic Designing">Graphic Designing</option>
+                    <option value="None">None of the above, will discuss directly</option>
+                  </optgroup>
+                </select>
+              </div> 
+          
+              <!-- <-- Training Info -->
+              <div>
+                <label class="block_element">Training Mode (required)</label>
+                <label><input type="radio" name="reg_training_mode" value="Online" required /> Live online</label>
+                <label><input type="radio" name="reg_training_mode" value="Offline" required /> Classroom</label>
+              </div>
+          
+              <div>
+                <label class="block_element">SCOPE INDIA Location (required)</label>
+                <label><input type="radio" name="reg_training_location" value="Technopark TVM" required /> Technopark TVM</label>
+                <label><input type="radio" name="reg_training_location" value="Thampanoor TVM" required /> Thampanoor TVM</label>
+                <label><input type="radio" name="reg_training_location" value="Kochi" required /> Kochi</label>
+                <label><input type="radio" name="reg_training_location" value="Nagercoil" required /> Nagercoil</label>
+                <label><input type="radio" name="reg_training_location" value="Online" required /> Online</label>
+              </div>
+          
+              <div>
+                <label class="block_element" for="reg_preferred_timings">Preferred Training Timings (required)</label>
+                <label><input type="checkbox" name="reg_preferred_timings" value="Between 8am - 10am"> Between 8am - 10am</label><br/>
+                <label><input type="checkbox" name="reg_preferred_timings" value="Between 9am - 1pm"> Between 9am - 1pm</label><br/>
+                <label><input type="checkbox" name="reg_preferred_timings" value="Between 1pm - 6pm"> Between 1pm - 6pm</label><br/>
+                <label><input type="checkbox" name="reg_preferred_timings" value="Between 6pm - 10pm"> Between 6pm - 10pm</label>
+              </div> 
+          
+              <!-- Guardian Info -->
+              <div>
+                <label class="block_element" for="reg_guardian_name">Guardian's Name</label>
+                <input class="block_element" type="text" id="reg_guardian_name" name="reg_guardian_name" />
+              </div>
+          
+              <div>
+                <label class="block_element" for="reg_guardian_occupation">Guardian's Occupation</label>
+                <input class="block_element" type="text" id="reg_guardian_occupation" name="reg_guardian_occupation" />
+              </div>
+          
+              <div>
+                <label class="block_element" for="reg_guardians_mobile">Guardian's Mobile</label>
+                <input class="block_element" type="tel" id="reg_guardians_mobile" name="reg_guardians_mobile" />
+              </div>
+          
+              <!-- Location and Address -->
+              <div>
+                <label class="block_element" for="location">Location</label>
+                <input class="block_element" type="text" id="location" name="location" required />
+              </div>
+          
+              <div>
+                <label class="block_element" for="reg_address">Address</label>
+                <input class="block_element" type="text" id="reg_address" name="reg_address" minlength="8" maxlength="150" />
+              </div>
+          
+              <div>
+                <label class="block_element" for="reg_country">Country</label>
+                <input class="block_element" type="text" id="reg_country" name="reg_country" minlength="3" maxlength="60" />
+              </div>
+          
+              <div>
+                <label class="block_element" for="reg_state">State</label>
+                <input class="block_element" type="text" id="reg_state" name="reg_state" minlength="3" maxlength="60" />
+              </div>
+          
+              <div>
+                <label class="block_element" for="reg_city">City</label>
+                <input class="block_element" type="text" id="reg_city" name="reg_city" minlength="3" maxlength="60" />
+              </div>
+          
+              <div>
+                <label class="block_element" for="reg_zip">PIN/Zip Code</label>
+                <input class="block_element" type="text" id="reg_zip" name="reg_zip" minlength="3" maxlength="10" />
+              </div>
+          
+              <!-- Message -->
+              <div>
+                <label class="block_element" for="message">Your Message</label>
+                <textarea class="block_element" id="message" name="message" rows="4"></textarea>
+              </div>
+          
+              <!-- Submit -->
+              <div class="submit_form">
+                <button id="call_back_visitor_click" type="submit">Complete Registration</button>
+              </div>
+          
+            </section>
+          </form>
+          
+		<footer id="container_footer">
+			<p>We are located at Technopark&nbsp;TVM | Thampanoor&nbsp;TVM | Kochi,&nbsp;Kerala | Nagercoil,&nbsp;Tamil&nbsp;Nadu</p>
+			<p><a href="tel:+919745936073" title="Call SCOPE INDIA Technopark, Trivandrum, Kerala 09745936073">9745936073&nbsp;(TPK)</a>
+				<a href="tel:+919745936073" title="Call SCOPE INDIA Trivandrum, Kerala 09745936073">9745936073&nbsp;(TVM)</a>
+				<a href="tel:+917592939481" title="Call SCOPE INDIA Kochi, Kerala 07592939481">7592939481&nbsp;(EKM)</a>
+				<a href="tel:+918075536185" title="Call SCOPE INDIA Nagercoil, Kerala 08075536185">8075536185&nbsp;(NGL)</a>
+				<a href="mailto:info@scopeindia.org?subject=I want to know more about courses" title="Email SCOPE INDIA">info@scopeindia.org</a>
+			</p>
+			<p class="footer_line">
+                All Rights Reserved 
+                <a href="https://www.suffixesolutions.com/" title="Suffix E Solutions, a trusted IT Partner, the parent company of SCOPE INDIA" target="_blank">
+                    SCOPE INDIA & SUFFIX E SOLUTIONS PRIVATE LIMITED
+                </a>
+                &copy;&nbsp;2007-2025
+                <span>|</span>
+                <a href="privacy-policy.html" title="SCOPE INDIA Privacy Policy">
+                    Privacy Policy
+                </a>
+				<span>|</span>
+                <a href="#" title="SCOPE INDIA Privacy Policy">
+                    Blog
+                </a>
+            </p>
+		</footer>
+	</body>
+</html>

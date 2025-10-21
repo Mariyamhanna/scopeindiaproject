@@ -1,0 +1,56 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div style="clear:both"></div>
+    <nav id="main_navigation">
+        <ul class="desktop">
+            <li><a href="home" target="_self" class="current">HOME</a></li>
+            <li><a href="courses" target="_self">COURSES</a></li>
+            <li><a class="registration_link" href="register" target="_self">REGISTRATION</a></li>
+            <li><a href="about" target="_self">ABOUT US</a></li>
+            <li><a href="faq" target="_self">FAQ</a></li>
+            {% if request.session.user_id %}
+                <li><a href="{% url 'profile' %}" target="_self">PROFILE</a></li>
+                <li><a href="{% url 'logout' %}" target="_self">LOGOUT</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}" target="_self">LOGIN</a></li>
+            {% endif %}
+            <li><a href="contact" target="_self">CONTACT US</a></li>
+        </ul>
+        <span id="mobile-icon">
+        <ul class="mobile" id="mobile_menu">
+            <li style="text-align: right;"><span class="close_button">X</span></li>
+            <li><a href="home.html" target="_self" class="current">HOME</a></li>
+            <li><a href="courses-scope-india.html" target="_self">COURSES</a></li>
+            <li><a class="registration_link" href="register" target="_self">REGISTRATION</a></li>
+            <li><a href="about" target="_self">ABOUT US</a></li>
+            <li><a href="faq" target="_self">FAQ</a></li>
+            <li><a href="faq" target="_self">REVIEWS</a></li>
+            <li><a href="contact" target="_self">CONTACT US</a></li>
+        </ul>
+        </span>
+    </nav>
+    
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        {% for message in messages %}
+            <p class="error-message">{{ message }}</p>
+        {% endfor %}
+        
+        <!-- Sign Up Link -->
+        <p class="signup-link">Didn't sign up? <a href="register" class="signup-link-text">Sign up</a></p>
+    </div>
+</body>
+</html>

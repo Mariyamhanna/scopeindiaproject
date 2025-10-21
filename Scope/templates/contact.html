@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>SCOPE INDIA Locations, Software, Networking, Cloud & Testing Courses</title>
+		<meta name="description" content="Learn Python, Java, .NET, Cloud (AWS, Azure), Networking & Software Testing with expert training at SCOPE India. Online & offline courses available!" />
+	    <meta name="author" content="SUFFIX E SOLUTIONS" />
+		<meta name="keywords" content="professional courses in Trivandrum, data science training, AI certification, Microsoft Power BI course, advanced IT skills, Power BI course, learn Power BI, learn data analysis, course on Power BI, data analytic course, data analytics with Power BI course, data science course near me with placement, data science complete course, artificial intelligence certification, AI certificate programs, learn to be a data scientist, AI ML certification, AI certificate course, best AI certification, data science training near me, best AI ML certification, data analyst and data scientist course, best analytics course, be in data science, artificial intelligence certification training, advanced IT courses for professionals, top IT training institute in Trivandrum, best IT training in Kochi, IT training institute Nagercoil, contact us, location details, contact detail, scope india kochi, scope india nagercoil, contact for details, details of location, scope indira trivandrum, contact scope india">
+	    <!-- Mobile Specific Metas -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	    <link rel="icon" type="image/x-icon" href="images/scopeindia-bird-logo-icon.ico">
+		<link rel="canonical" href="https://scopeindia.org/ contact" />
+		<link rel="alternate" hreflang="en" href="https://scopeindia.org/ contact" />
+        <link  rel="stylesheet" href="{% static 'Css/contact.css' %}"/>
+        <script src="{%static 'js/contact.main.js'%}" type="text/javascript"></script>
+	    <script src="{%static 'js/contact.js'%}" type="text/javascript"></script>  
+	</head>
+	<body>
+
+		<!-- ================= overlay end ================= -->
+		<div id="up_button" onclick="scrollToTop()">
+			<svg width="24"  fill="currentColor" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+			</svg>
+		</div>
+		<div id="call_float_icons">
+			<a href="tel:+919745936073" title="Call SCOPE INDIA in just a click!">
+				<img src="{%static 'images/callnow-scope-india.webp'%}" alt="Call SCOPE INDIA" />
+			</a>
+			<a href="https://wa.me/+919745936073" target="_blank" title="Talk to our student care team on WhatsApp!">
+				<img src="{%static 'images/whatsapp-scope-india.webp'%}" alt="Call SCOPE INDIA" />
+			</a>
+			<a href="image-gallery-scope-india.html" title="Watch SCOPE INDIA through photos and videos!">
+				<img src="{%static 'images/gallery-scope-india.webp'%}" alt="SCOPE INDIA Gallery" />
+			</a>
+			<!-- <img id="mobile_menu_button" src="images/mobile-menu-icon-scopeindia.webp" alt="Main Menu" title="Click for the site Menu!" width="50px"> -->
+			<svg id="mobile_menu_button" xmlns="http://www.w3.org/2000/svg"  fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+			  </svg>
+		</div>
+		<section id="container_header">
+			<div>
+				<div id="container_logo">
+					<a href="home" target="_self" class="current"><img id="logo" src="{%static 'images/scopeindia-logo1.webp'%}" alt="SCOPE INDIA logo" title="SCOPE INDIA, Center for Software, Networking, and Cloud education from Kerala and Tamil Nadu" /></a>
+				</div>
+				<div id="container_google_star">
+					<a href=" ">
+						<img id="google_star" src="{%static 'images/google-rating-scope-india.webp'%}" width="200px" title="SCOPE INDIA is a 5 star rated institute">
+					</a>				
+				</div>
+			</div>
+			<div style="clear:both"></div>
+			<nav id="main_navigation">
+				<ul class="desktop">
+					<li><a href="home" target="_self" >HOME</a></li>
+					<li><a href="courses" target="_self" >COURSES</a></li>
+					<li><a class="registration_link" href="register" target="_self">REGISTRATION</a></li>
+					<li><a href="about" target="_self">ABOUT US</a></li>
+					<li><a href="faq" target="_self">FAQ</a></li>
+					<!-- <li><a href="aces-scope-india.html" target="_self">OUR ACES</a></li> -->
+					{% if request.session.user_id %}
+					<li><a href="{% url 'profile' %}" target="_self">PROFILE</a></li>
+					<li><a href="{% url 'logout' %}" target="_self">LOGOUT</a></li>
+				{% else %}
+					<li><a href="{% url 'login' %}" target="_self">LOGIN</a></li>
+				{% endif %}
+					<li><a href="contact" target="_self" >CONTACT US</a></li>
+				</ul>
+				<span id="mobile-icon">
+				<ul class="mobile" id="mobile_menu">
+					<li style="	text-align: right;"><span class="close_button">X</span></li>
+					<li><a href="home" target="_self" >HOME</a></li>
+					<li><a href="courses" target="_self" >COURSES</a></li>
+					<li><a class="registration_link" href="register" target="_self">REGISTRATION</a></li>
+					<li><a href="about" target="_self">ABOUT US</a></li>
+					<li><a href="faq" target="_self">FAQ</a></li>
+					<!-- <li><a href="aces-scope-india.html" target="_self">OUR ACES</a></li> -->
+					<li><a href="contact" target="_self">CONTACT US</a></li>
+				</ul>
+				<!-- onclick="show_mobile_menu()"  -->
+				<!-- <img id="mobile_menu_button" src="images/mobile-menu-icon-scopeindia.webp" alt="Main Menu" title="Click for the site Menu!" width="50px"> -->
+			</span>
+			</nav>
+		</section>
+		<div style="clear: both;"></div>
+		<section id="container_page_intro">
+			<div>
+				<div id="container_google_star1">
+					<a href=" ">
+						<img id="google_star" src="{%static 'images/contact-scope-india.webp'%}" title="SCOPE INDIA is a 5 star rated institute" alt="google 5 star">
+					</a>					
+					<br />
+				</div>
+				<h1>SCOPE&nbsp;INDIA Locations & Contact Details</h1>
+				<h2>Center for Software, Networking, & Cloud Education</h2>
+				<h3>One of India's best Training destinations for Software, Networking, DevOps and Cloud Computing courses with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and we have assisted more than 15,000 students so far.</h3>
+				<!-- <img src="ads/scope-india-it-training-placements-online-offline-classes-4.webp" /> -->
+			</div>
+		</section>
+		<div style="clear:both;"></div>
+		<section id="locations_head_container">
+			<div class="intro_box">
+				<div>
+					<h3 title="Contact SCOPE INDIA, Software, Networking, Software Testing, Cloud Computing, Digital Marketing, and DevOps Training Center">
+					SCOPE INDIA is open 365 days a year
+					</h3>
+					<h5>Call us now if you are looking for an IT job or adding more skills to your career</h5>
+				</div>
+			...</div>
+			<div>
+				<h4>SCOPE INDIA Trivandrum, Kerala</h4>
+				<address>TC 25/1403/3, Athens Plaza, SS Kovil Road, Thampanoor, Trivandrum, Kerala 695001</address>
+				<a class="footer_links" href="tel:+919745936073" title="Call SCOPE INDIA Thampanoor, Trivandrum, Kerala +919745936073">9745936073</a>
+				<a class="footer_links" href="mailto:info@scopeindia.org" title="Email SCOPE INDIA Thampanoor, Trivandrum, Kerala info@scopeindia.org">info@scopeindia.org</a>
+				<a class="footer_links" href="https://g.page/r/CXbW6SZGeJPfEAE" title="SCOPE INDIA Google Map Location to Trivandrum, Kerala" target="_blank">Location Route Map</a>
+			</div>
+			<div>
+				<h4>SCOPE INDIA Technopark, Kerala</h4>
+				<address>Phase 1, Main Gate, Diamond Arcade, Near Technopark, Trivandrum</address>
+				<a class="footer_links" href="tel:+919745936073" title="Call SCOPE INDIA Technopark, Trivandrum, Kerala +919745936073">9745936073</a>
+				<a class="footer_links" href="mailto:info@scopeindia.org" title="Email SCOPE INDIA Technopark, Trivandrum, Kerala technopark@scopeindia.org">technopark@scopeindia.org</a>
+				<a class="footer_links" href="https://maps.app.goo.gl/hbG8wSiDcW2w9kyH9" title="SCOPE INDIA Google Map Location to Technopark, Trivandrum, Kerala" target="_blank">Location Route Map</a>
+			</div>
+			<div>
+				<h4>SCOPE INDIA Kochi, Kerala</h4>
+				<address>Vasanth Nagar Rd, near JLN Metro Station, Kaloor, Kochi, Kerala 682025</address>
+				<a class="footer_links" href="tel:+917592939481" title="Call SCOPE INDIA Kaloor, Kochi, Kerala +917592939481">7592939481</a>
+				<a class="footer_links" href="mailto:kochi@scopeindia.org" title="Email SCOPE INDIA Kaloor, Kochi, Kerala kochi@scopeindia.org">kochi@scopeindia.org</a>
+				<a class="footer_links" href="https://g.page/r/CWv07KhFfP7dEAE" title="SCOPE INDIA Google Map Location to Kochi, Kerala" target="_blank">Location Route Map</a>
+			</div>
+			<div>
+				<h4>SCOPE INDIA Nagercoil 1, Tamil&nbsp;Nadu</h4>
+				<address>Near WCC College, Palace Rd, Nagercoil, Tamil Nadu 629001</address>
+				<a class="footer_links" href="tel:+918075536185" title="Call SCOPE INDIA Nagercoil, Tamil Nadu +918075536185">8075536185</a>
+				<a class="footer_links" href="mailto:ngl@scopeindia.org" title="Email SCOPE INDIA Nagercoil, Tamil Nadu ngl@scopeindia.org">ngl@scopeindia.org</a>
+				<a class="footer_links" href="https://goo.gl/maps/fVjnoN7GzcU1zson7" title="SCOPE INDIA Google Map Location to Nagercoil, Tamil Nadu" target="_blank">Location Route Map</a>
+			</div>
+			<div class="span2_columns">
+				<h4>SCOPE INDIA Nagercoil 2, Tamil&nbsp;Nadu</h4>
+				<address>Pharma Street, 5/2 Ward 28, Distillery Road, Putheri Nagercoil</address>
+				<a class="footer_links" href="tel:+918075536185" title="Call SCOPE INDIA Nagercoil, Tamil Nadu +918075536185">8075536185</a>
+				<a class="footer_links" href="mailto:ngl@scopeindia.org" title="Email SCOPE INDIA Nagercoil, Tamil Nadu ngl@scopeindia.org">ngl@scopeindia.org</a>
+				<a class="footer_links" href="https://goo.gl/maps/fVjnoN7GzcU1zson7" title="SCOPE INDIA Google Map Location to Nagercoil, Tamil Nadu" target="_blank">Location Route Map</a>
+			</div>
+		</section>
+		
+		<footer id="container_footer">
+			<p>We are located at Technopark&nbsp;TVM | Thampanoor&nbsp;TVM | Kochi,&nbsp;Kerala | Nagercoil,&nbsp;Tamil&nbsp;Nadu</p>
+			<p><a href="tel:+919745936073" title="Call SCOPE INDIA Technopark, Trivandrum, Kerala 09745936073">9745936073&nbsp;(TPK)</a>
+				<a href="tel:+919745936073" title="Call SCOPE INDIA Trivandrum, Kerala 09745936073">9745936073&nbsp;(TVM)</a>
+				<a href="tel:+917592939481" title="Call SCOPE INDIA Kochi, Kerala 07592939481">7592939481&nbsp;(EKM)</a>
+				<a href="tel:+918075536185" title="Call SCOPE INDIA Nagercoil, Kerala 08075536185">8075536185&nbsp;(NGL)</a>
+				<a href="mailto:info@scopeindia.org?subject=I want to know more about courses" title="Email SCOPE INDIA">info@scopeindia.org</a>
+			</p>
+			<p class="footer_line">
+                All Rights Reserved 
+                <a href="https://www.suffixesolutions.com/" title="Suffix E Solutions, a trusted IT Partner, the parent company of SCOPE INDIA" target="_blank">
+                    SCOPE INDIA & SUFFIX E SOLUTIONS PRIVATE LIMITED
+                </a>
+                &copy;&nbsp;2007-2025
+                <span>|</span>
+                <a href="privacy-policy.html" title="SCOPE INDIA Privacy Policy">
+                    Privacy Policy
+                </a>
+				<span>|</span>
+                <a href="#" title="SCOPE INDIA Privacy Policy">
+                    Blog
+                </a>
+            </p>
+		</footer>
+	</body>
+</html>
