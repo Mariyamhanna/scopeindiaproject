@@ -163,12 +163,6 @@ This project uses Git for version control and GitHub for hosting and collaborati
 
 ![23](https://github.com/user-attachments/assets/ee0a9747-be0a-4c5f-be48-17834f01d7aa)
 
-![24](https://github.com/user-attachments/assets/b5c413f0-1f57-4541-b8db-44439b8f2bc5)
-
-![25](https://github.com/user-attachments/assets/6a808369-705c-4f21-99e7-934ab086862a)
-
-
-
 ## Demo
 
 Check out my video: [Watch Demo of My Project🔥](https://youtu.be/cgFwYrm57g4)
