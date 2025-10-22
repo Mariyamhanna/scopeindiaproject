@@ -117,15 +117,15 @@ This project uses Git for version control and GitHub for hosting and collaborati
 
 ## Screenshots
 
-![1](https://github.com/user-attachments/assets/2a9543b0-8684-4cfa-9a7c-2e6d28458fc1)
+![1](https://github.com/user-attachments/assets/58beae6c-dfd7-441f-a8e0-816499a7d1cf)
 
-![2](https://github.com/user-attachments/assets/75e762e9-0d5a-46f7-92f1-aeaf41b61713)
+![2](https://github.com/user-attachments/assets/2c067991-2b14-4dbf-a894-62a993a38d7b)
 
-![3](https://github.com/user-attachments/assets/50910b7f-9143-45ec-8493-af016da95960)
+![3](https://github.com/user-attachments/assets/64a803d9-e631-4c9c-8ded-19b74dc201ea)
 
-![4](https://github.com/user-attachments/assets/2752eff4-42b2-48fa-a201-9ba11763e844)
+![4](https://github.com/user-attachments/assets/737c6955-ebc6-44d6-81e3-8dc879ce5060)
 
-![5](https://github.com/user-attachments/assets/b9aa70db-8487-4710-9bc5-88e4d6012989)
+![5](https://github.com/user-attachments/assets/2c488216-eb89-4199-868d-abf7490feab2)
 
 ![6](https://github.com/user-attachments/assets/f5191f60-f36d-4f67-81e2-1533bf4be809)
 
